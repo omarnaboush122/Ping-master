@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+h3 span {
+  color: hsl(223, 87%, 63%);
+  font-size: 30px;
+}
+
+h1 {
+  color: hsl(0, 0%, 59%);
+  font-weight: 300;
+}
+
+h1 span {
+  color: black;
+  font-weight: 700;
+}
+
+.subscribe {
+  transform: translateY(-12px);
+  font-size: 15px;
+}
+.control {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.control.error small {
+  opacity: 1;
+}
+.control input {
+  width: 300px;
+  padding: 12px 25px;
+  border-radius: 20px;
+  margin-right: 10px;
+  border: 1px solid hsl(223, 100%, 88%);
+  outline: 1px solid hsl(223, 100%, 88%);
+}
+.control.error input {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+
+.control input::placeholder {
+  color: hsl(223, 100%, 88%);
+}
+.control.control.error input::placeholder {
+  color: hsl(354, 100%, 66%);
+}
+
+.control small {
+  position: absolute;
+  left: 35%;
+  bottom: -50%;
+  font-size: 11px;
+  color: hsl(354, 100%, 66%);
+  opacity: 0;
+}
+.control button {
+  color: white;
+  background-color: hsl(223, 87%, 63%);
+  padding: 10px 40px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px hsl(223deg 87% 63%);
+  border-bottom-width: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.control button:active {
+  border-bottom-width: 1px;
+  transform: translateY(2px);
+}
+
+img {
+  width: 40%;
+  margin-bottom: 70px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+ul li {
+  margin-right: 20px;
+}
+ul li a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+ul li a:hover {
+  background-color: hsl(228, 45%, 44%);
+  color: white;
+}
+.copy {
+  font-size: 13px;
+  color: hsl(0, 0%, 59%);
+  margin-bottom: 100px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 768px) {
+  .control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .control input {
+    width: 350px;
+    margin-bottom: 10px;
+  }
+  .control.error input {
+    margin-bottom: 45px;
+  }
+  .control button {
+    width: 350px;
+  }
+  .control.error small {
+    bottom: 50%;
+  }
+}
